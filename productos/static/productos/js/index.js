@@ -13,7 +13,7 @@ iconoBolsa.addEventListener('click', () => {
     if(carrito.classList.contains('mostrar-carrito')){
         const listaCarrito = document.querySelector('.lista-items-carrito');
         listaCarrito.innerHTML = '';
-        fetch('http://127.0.0.1:8000/cart/')
+        fetch('/cart/')
         .then(response => response.text())
         .then(text => {
             listaCarrito.innerHTML = text;

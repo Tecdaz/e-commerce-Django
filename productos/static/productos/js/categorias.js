@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             categoria.classList.toggle('selected', true);
             let nombre = categoria.getElementsByTagName('h2')[0].textContent;
             console.log(nombre);
-            fetch(`http://127.0.0.1:8000/productos/${nombre}`)
+            fetch(`/productos/${nombre}`)
             .then(response => {
                 if(!response.ok){
                     throw new Error('No se pudo cargar el archivo');
