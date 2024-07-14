@@ -1,0 +1,9 @@
+{% extends "productos/base.html" %}
+{% load static %}
+{% block content%}
+    {% include "productos/_productos.html" %}
+{% endblock %}
+{% block scripts %}
+    <script type="module" src="{% static 'productos/js/likes.js' %}"></script>
+    <script type="module" src="{% static 'productos/js/listaProductos.js' %}"></script>
+{% endblock %}

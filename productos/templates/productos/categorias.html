@@ -1,0 +1,26 @@
+{% extends 'productos/base.html' %}
+{% load static %}
+
+{% block content %}
+<main class="contenido-categorias">
+    <div class="contenedor-categorias">
+        <h1>Categorias</h1>
+        <div class="lista-categorias">
+            {% for categoria in categorias %}
+            <div class="categoria">
+                <h2>{{categoria.Category}}</h2>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+    <div class="contenedor-fetch">
+    </div>
+</main>
+{% endblock %}
+{% block scripts %}
+    <script type="module" src="{% static 'productos/js/likes.js' %}"></script>
+    <script type="module" src="{% static 'productos/js/categorias.js' %}"></script>
+{% endblock %}
+{% block estilos %}
+    <link rel="stylesheet" href="{% static 'productos/css/categorias.css' %}">
+{% endblock %}
