@@ -16,7 +16,8 @@
             <div class="card-info">
                 <a class="titulo-card" href="{% url 'vista_producto' producto.ProductId %}">{{producto.ProductTitle}}</a>
                 <p class="precio-card">{% random_number %}</p>
-                <a class="boton-card" href="#">Agregar al carrito</a>
+                <a class="boton-card" id="cart-{{ producto.ProductId }}">Agregar al carrito</a>
+                {% csrf_token %}
             </div> 
         </div>
         {% endfor %}

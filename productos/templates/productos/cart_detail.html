@@ -1,0 +1,8 @@
+{% load random_tags %}
+{% for item in items %}
+    <div class="item-carrito">
+        <img src="{{ item.ImageURL }}" alt="" class="imagen-carrito">
+        <p class="nombre-item-carrito">{{ item }}</p>
+        <p class="precio-item-carrito">{% random_number %}</p>
+    </div>
+{% endfor %}
