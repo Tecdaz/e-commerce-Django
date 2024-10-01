@@ -21,15 +21,16 @@ def poblar_datos():
     for producto_data in productos_data[:5]:
         producto = Product(
             ProductId=producto_data['ProductId'],
-            Gender=producto_data['Gender'],
+            # Gender=producto_data['Gender'],
             Category=producto_data['Category'],
-            SubCategory=producto_data['SubCategory'],
-            ProductType=producto_data['ProductType'],
-            Colour=producto_data['Colour'],
-            Usage=producto_data['Usage'],
+            # SubCategory=producto_data['SubCategory'],
+            # ProductType=producto_data['ProductType'],
+            # Colour=producto_data['Colour'],
+            # Usage=producto_data['Usage'],
             ProductTitle=producto_data['ProductTitle'],
             ImageURL=producto_data['ImageURL'],
-            Image=producto_data['Image']
+            # Image=producto_data['Image']
+            Description=producto_data['SubCategory']
         )
         producto.save()
 
